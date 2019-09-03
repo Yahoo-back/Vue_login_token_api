@@ -1,30 +1,91 @@
+<style lang="less">
+.ivu-card {
+  background: none ;
+}
+.ivu-card-head p, .ivu-card-head-inner {
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  font-size: 24px;
+  line-height: 24px;
+}
+.ivu-card-head {
+  border-bottom: none;
+  padding: none;
+}
+.ivu-input {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: inset 0 0 4px rgba(255,255,255,0.2),0 0 4px	rgba(255,255,255,0.2); 
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:2px solid #F0F0F0;
+  -o-transition:all .5s;
+  -moz-transition:all .5s;
+  -webkit-transition:all .5s;
+  -ms-transition:all .5s;
+  height: 45px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+}
+.ivu-input:focus{
+  border-color: #fff;
+  outline:none;
+  box-shadow:0 0 5px #fff;
+}
+.ivu-input:hover{
+  border-color: #fff;
+  outline:none;
+  box-shadow:0 0 5px #fff;
+}
+.ivu-form-item-error .ivu-input {
+  border: 2px solid #ed3f14;
+}
+.ivu-form-item-error-tip {
+  font-size: 13px;
+}
+.ivu-btn-primary{
+  background: transparent;
+  border-color: #fff;
+}
+.ivu-btn-primary:hover{
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+.ivu-btn {
+  border: 2px solid #fff;
+}
+.tlogin{
+  width: 328px;
+  height: 45px;
+  font-size: 18px;
+}
+</style>
 <template>
   <div id="particles">
     <div class="login" @keydown.enter="handleSubmit">
       <div class="login-con">
         <Card :bordered="false">
           <p slot="title">
-            <Icon type="log-in"></Icon>
-            欢迎登录
+            后台管理系统
           </p>
           <div class="form-con">
             <Form ref="loginForm" :model="form" :rules="rules">
               <FormItem prop="username">
                 <Input v-model="form.username" placeholder="请输入用户名">
-                <span slot="prepend">
-                    <Icon :size="16" type="person"></Icon>
-                  </span>
+                
                 </Input>
               </FormItem>
               <FormItem prop="password">
                 <Input type="password" v-model="form.password" placeholder="请输入密码">
-                <span slot="prepend">
-                    <Icon :size="14" type="locked"></Icon>
-                  </span>
+               
                 </Input>
               </FormItem>
               <FormItem>
-                <Button @click="handleSubmit" type="primary" :loading="loading" long>登录</Button>
+                <Button @click="handleSubmit" type="primary" :loading="loading" class="tlogin">登录</Button>
               </FormItem>
             </Form>
             <!-- <p class="login-tip">密码:123456</p> -->
@@ -34,7 +95,14 @@
     </div>
   </div>
 </template>
-
+<style lang="less">
+  .el-collapse-item__header {
+    font-size: 15px;
+  }
+	.main .single-page-con {
+			background: #fff;
+		}
+</style>
 <script>
   import Cookies from 'js-cookie';
   import particles from 'particles.js';
@@ -195,10 +263,10 @@
     position: absolute;
     &-con {
       position: absolute;
-      right: 160px;
+      right: 42%;
       top: 50%;
       transform: translateY(-60%);
-      width: 300px;
+      width: 360px;
       &-header {
         font-size: 16px;
         font-weight: 300;
