@@ -25,7 +25,7 @@ npm install
 ```bush
 npm run dev
 ```
-### Production(Build) ,and access:http://localhost:9528
+### Production(Build) ,and access
 ```bush
 npm run build
 ```
@@ -87,9 +87,31 @@ server {
 ![](readme_static/login.png)
 
 
-### 导航栏
-- 仪表盘
-![](readme_static/menu.png)
+
+
+### 登录接口传值：
+![](readme_static/login-post.png)
+
+### 登录接口返回的值：
+![](readme_static/login-accept.png)
+
+### 菜单权限传值：
+![](readme_static/menu_accept.png)
+
+
+### 菜单列表获取：
+![](readme_static/menu_list.png)
+
+
+### 列表传值及效果图：
+![](readme_static/get_list.png)
+![](readme_static/list.png)
+
+### 列表效果：
+![](readme_static/table.png)
+![](readme_static/pagination.png)
+
+
 
 
 
