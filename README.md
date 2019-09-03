@@ -100,7 +100,7 @@ server {
 
 
 ### 菜单列表获取：
-![](readme_static/menu_list.png)
+![](readme_static/menus_list.png)
 
 
 ### 列表传值及效果图：
